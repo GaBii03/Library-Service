@@ -3,7 +3,6 @@ using LibraryService.Models.Entities;
 using LibraryService.Models.Requests;
 using FluentValidation;
 using MapsterMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryService.Host.Controllers

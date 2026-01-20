@@ -4,7 +4,6 @@ using LibraryService.Host.Validators;
 using LibraryService.Models.Configurations;
 using FluentValidation;
 using Mapster;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
 using Serilog;

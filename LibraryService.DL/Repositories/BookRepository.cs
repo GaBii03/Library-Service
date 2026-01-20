@@ -10,15 +10,15 @@ using MongoDB.Driver;
 
 namespace LibraryService.DL.Repositories
 {
-    public class BookMongoRepository : IBookRepository
+    public class BookRepository : IBookRepository
     {
         private readonly IOptionsMonitor<MongoDbConfiguration> _mongoDbConfiguration;
-        private readonly ILogger<BookMongoRepository> _logger;
+        private readonly ILogger<BookRepository> _logger;
 
         private readonly IMongoCollection<Book> _booksCollection;
 
-        public BookMongoRepository(IOptionsMonitor<MongoDbConfiguration> mongoDbConfiguration,
-                                  ILogger<BookMongoRepository> logger,
+        public BookRepository(IOptionsMonitor<MongoDbConfiguration> mongoDbConfiguration,
+                                  ILogger<BookRepository> logger,
                                   IMongoClient mongoClient)
         {
             _mongoDbConfiguration = mongoDbConfiguration;

@@ -14,7 +14,7 @@ namespace LibraryService.DL
             // MongoDB handles int32 natively, no custom serializer needed
             
             services.AddSingleton<IReaderRepository, ReaderRepository>();
-            services.AddSingleton<IBookRepository, BookMongoRepository>();
+            services.AddSingleton<IBookRepository, BookRepository>();
             services.AddSingleton<ILoanRepository, LoanRepository>();
             return services;
         }
