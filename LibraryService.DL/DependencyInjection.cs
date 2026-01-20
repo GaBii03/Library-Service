@@ -11,7 +11,6 @@ namespace LibraryService.DL
     {
         public static IServiceCollection AddDataLayer(this IServiceCollection services)
         {
-            // MongoDB handles int32 natively, no custom serializer needed
             
             services.AddSingleton<IReaderRepository, ReaderRepository>();
             services.AddSingleton<IBookRepository, BookRepository>();
@@ -25,7 +24,6 @@ namespace LibraryService.DL
         {
             services.Configure<MongoDbConfiguration>(configuration.GetSection("MongoDbConfiguration"));
             
-            // Register MongoClient with connection string from configuration
             var mongoConfig = configuration.GetSection("MongoDbConfiguration").Get<MongoDbConfiguration>();
             if (mongoConfig != null)
             {
